@@ -1,0 +1,148 @@
+/* === RESET BÁSICO === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === CABEÇALHO === */
+header {
+  background: linear-gradient(90deg, #004d7a, #008793);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* === MENU DE NAVEGAÇÃO === */
+nav {
+  background-color: #00334d;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0.8rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #005c82;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #0094b2;
+}
+
+/* === CONTEÚDO PRINCIPAL === */
+main {
+  flex: 1;
+  max-width: 1000px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+section h2 {
+  color: #004d7a;
+  margin-bottom: 15px;
+  border-left: 5px solid #008793;
+  padding-left: 10px;
+}
+
+/* === REDAÇÕES === */
+.grid-redacoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+article {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #f9fafb;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+article:hover {
+  transform: scale(1.02);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+article h3 {
+  color: #006a8e;
+  margin-bottom: 10px;
+}
+
+/* === SEÇÕES DE SOBRE E CONTATO === */
+#sobre, #contato {
+  background-color: #f9fafb;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+a.email {
+  color: #006a8e;
+  text-decoration: none;
+}
+
+a.email:hover {
+  text-decoration: underline;
+}
+
+/* === RODAPÉ === */
+footer {
+  background-color: #004d7a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 30px;
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    width: 80%;
+    text-align: center;
+  }
+
+  main {
+    padding: 20px;
+  }
+}
